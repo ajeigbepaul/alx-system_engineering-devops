@@ -1,1 +1,1 @@
-mirror script
+second directory permission
