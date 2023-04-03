@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bash#
 # Installs HAProxy version 1.8 with the following configurations:
 #+    Enables management via the init script.
 #+    Distributes requests using a round-robin algorithm.
@@ -6,8 +6,7 @@
 apt-get update
 apt-get install -y haproxy
 
-#Configure HAProxy
-printf %s="
+printf %s"
 frontend hbnb-lb_front
         tbind *:80
         tmode http
