@@ -7,7 +7,7 @@ apt-get update
 apt-get install -y haproxy
 
 #Configure HAProxy
-haproxy_config="
+printf %s="
 frontend hbnb-lb_front
         tbind *:80
         tmode http
@@ -16,8 +16,7 @@ backend hbnb-lb_back
         tbalance roundrobin
         server 1723-web-01 100.26.181.86:80 check
         server 1723-web-02 34.238.192.13:80 check
-"
-echo -e $haprocy_config >> /etc/haproxy/haproxy.cfg
+">> /etc/haproxy/haproxy.cfg
 
 echo "ENABLED=1" >> /etc/default/haproxy
 
